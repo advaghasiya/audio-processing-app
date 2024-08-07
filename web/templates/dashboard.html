@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{.username}}!</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="audioFile" name="file" accept=".wav" required>
+            <button type="submit">Upload</button>
+        </form>
+        <div id="audioFilesList">
+            <h2>Your Audio Files</h2>
+            <ul id="fileList"></ul>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
